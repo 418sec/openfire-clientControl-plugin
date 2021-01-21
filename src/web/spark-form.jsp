@@ -8,6 +8,7 @@
 <%@ page import="org.apache.commons.fileupload.DiskFileUpload"%>
 <%@ page import="java.util.List"%>
 <%@ page import="org.apache.commons.fileupload.FileUploadException"%>
+<%@ page import="org.apache.commons.text.StringEscapeUtils"%>
 <%@ page import="org.jivesoftware.util.Log"%>
 <%@ page import="org.apache.commons.fileupload.FileItem"%>
 <%@ page import="java.util.Iterator"%>
@@ -331,7 +332,7 @@
     <tbody>
         <tr>
             <td>
-                <textarea name="optionalMessage" cols="40" rows="3" wrap="virtual"><%= optionalMessage%></textarea>
+                <textarea name="optionalMessage" cols="40" rows="3" wrap="virtual"><%= StringEscapeUtils.escapeHtml4(optionalMessage)%></textarea>
 
             </td>
         </tr>
